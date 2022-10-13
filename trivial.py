@@ -146,7 +146,7 @@ def primitiveRoot(alst, m):
 #print(EulerPhiSilly(n))
 
 # invertible
-printInv_mod(32)
+# printInv_mod(32)
 
 
 # order mod m and primitive roots
