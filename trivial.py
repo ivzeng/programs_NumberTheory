@@ -1,4 +1,3 @@
-import math
 import numpy as np
 
 # returns n!
@@ -129,33 +128,44 @@ def primitiveRoot(alst, m):
     return [i[0] for i in order_mod(alst, m) if i[1] == pm]
 
 # prime factorization
-# n = 28
-# printPrimeFactorization(n)
-# print(pFactorsCount(n))
-# print(pFactors(n))
+'''
+n = 28
+print('Prime factorization of ', n, ':', sep = '', end = ' ')
+printPrimeFactorization(n)
+print('number of positive factors:', pFactorsCount(n))
+print('they are:', pFactors(n))
+'''
 
 # gcd
-#print(EuclideanAlogorithm(2022, 203))
-#print(2022 * 76 + 203 * -757)
-#print((2022-757), 203*(2022-757)%2022)
-
-# phi function
-#n = 672
-#printPrimeFactorization(n)
-#print(EulerPhi(n))
+'''
+a, b = 2022,203
+x, y = EuclideanAlogorithm(a, b)
+print("x = ", x, "y = ", y)
+print("ax+by = ", a*x + b*y, '= gcd(a,b)')
+'''
+# Euler Totient function
+'''
+n = 672
+print('Prime factorization of ', n, ':', sep = '', end = ' ')
+printPrimeFactorization(n)
+print("Eular Totient function of ", n, ': ', EulerPhi(n), sep = '')
 #print(EulerPhiSilly(n))
+'''
 
 # invertible
-# printInv_mod(32)
-
+'''
+printInv_mod(30)
+'''
 
 # order mod m and primitive roots
-# m = 32
-# alst = [i for i in range(1, m)]
-# om = order_mod(alst.copy(), m)
-# print('order l of a mod', m, ':' ,om)
-# print('a:', [o[0] for o in om])
-# print("l:", [o[1] for o in om])
-# pr = primitiveRoot(alst, m)
-# print("number of primitive roots:", len(pr))
-# print("primitive roots: ", pr)
+'''
+m = 29
+alst = [i for i in range(1, m)]
+om = order_mod(alst.copy(), m)
+print('order l of a mod', m, ':' ,om)
+print('a:', [o[0] for o in om])
+print("l:", [o[1] for o in om])
+pr = primitiveRoot(alst, m)
+print("number of primitive roots:", len(pr))
+print("primitive roots: ", pr)
+'''
