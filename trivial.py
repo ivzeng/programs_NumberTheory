@@ -127,6 +127,16 @@ def primitiveRoot(alst, m):
     pm = EulerPhi(m)
     return [i[0] for i in order_mod(alst, m) if i[1] == pm]
 
+# quadratic residues
+def quadiaticResidues(a, p):
+    m = [0 for i in range(p)]
+    for x in range(1,p):
+        #print(x, x**2%p)
+        m[x**2%p] += 1
+    return [ai for ai in a if m[ai%p] != 0]
+
+
+
 # prime factorization
 '''
 n = 28
@@ -137,12 +147,12 @@ print('they are:', pFactors(n))
 '''
 
 # gcd
-'''
+#'''
 a, b = 2022,203
 x, y = EuclideanAlogorithm(a, b)
 print("x = ", x, "y = ", y)
 print("ax+by = ", a*x + b*y, '= gcd(a,b)')
-'''
+#'''
 # Euler Totient function
 '''
 n = 672
@@ -154,7 +164,7 @@ print("Eular Totient function of ", n, ': ', EulerPhi(n), sep = '')
 
 # invertible
 '''
-printInv_mod(30)
+printInv_mod(7)
 '''
 
 # order mod m and primitive roots
@@ -169,3 +179,10 @@ pr = primitiveRoot(alst, m)
 print("number of primitive roots:", len(pr))
 print("primitive roots: ", pr)
 '''
+
+# quadratic residues
+#'''
+p = 11
+a = [i for i in range(1, p)]
+print(quadiaticResidues(a, p))
+#'''
